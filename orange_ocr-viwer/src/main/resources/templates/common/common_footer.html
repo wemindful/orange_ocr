@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en">
+
+<body th:fragment="commonFooter">
+<footer class="footer">
+   <!-- <p>© 2020 <a href="http://www.xxx.com" target="_blank">Orange OCR, Inc.</a> Licensed under <a href="mailto:daiguoweistyel@foxmail.com">daiguoweistyel@foxmail.com</a>.
+        by the AmazeUI Team.</p>-->
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <p > 友情链接:
+                        <span th:each="al,iterStat : ${linkList}">
+                         <a  target="_blank" th:href="${al.linkUrl}" th:text="${al.linkName}" th:title="${al.remark}"></a><br/>
+                        </span>
+                    </p>
+                </div>
+                <div class="col-lg-2">
+                    <p>© 2020 <a href="http://www.xxx.com" target="_blank" th:text="${websiteConfig.domainName}">Orange OCR, Inc.</a> All rights reserved. <a href="mailto:daiguoweistyel@foxmail.com" th:text="${websiteConfig.recordNumber}">daiguoweistyel@foxmail.com</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

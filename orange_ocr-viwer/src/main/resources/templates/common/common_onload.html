@@ -1,0 +1,20 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en">
+<body th:fragment="onLoadJs">
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script th:src="@{assets/js/jquery-3.4.1.min.js}" type="text/javascript" charset="utf-8"></script>
+<!--<![endif]-->
+<script th:src="@{assets/js/jquery.validate.min.js}" type="text/javascript" charset="utf-8"></script>
+<script th:src="@{assets/js/amazeui.js}" type="text/javascript" charset="utf-8"></script>
+<script th:src="@{assets/js/fileviwer.js}" type="text/javascript" charset="utf-8"></script>
+<script th:src="@{assets/js/jquery-migrate-1.4.1.min.js}" type="text/javascript" charset="utf-8"></script>
+<script th:src="@{assets/js/ajaxfileupload.js}" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
