@@ -86,6 +86,10 @@ public class InitData {
 
         }
 
+        role_superadmin.setUserList(Arrays.asList(user));
+
+        roleRepository.save(role_superadmin);
+
         // 初始化 网站配置
         WebsiteConfig websiteConfig = websiteConfigService.findWebsiteConfig();
         if (websiteConfig == null) {

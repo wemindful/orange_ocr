@@ -31,7 +31,7 @@ public class OcrTextServiceImpl implements OcrTextService {
 
     @Override
     public Page<OcrTexts> findAllBySearch(Pages pages, Long tagId, String tagName) {
-        Pageable pageable = PageRequest.of(pages.getPage(), pages.getPageSize(), Sort.Direction.DESC, "tagId");
+        Pageable pageable = PageRequest.of(pages.getPage(), pages.getPageSize(), Sort.Direction.DESC, "textId");
         return  tagRepository.findAll(this.getWhereClause(tagId, tagName), pageable);
     }
 

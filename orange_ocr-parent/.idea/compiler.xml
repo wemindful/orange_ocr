@@ -9,11 +9,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="orange_ocr-server" />
         <module name="orange_ocr-viwer" />
+        <module name="orange_ocr-admin" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="orange_ocr-admin" options="-parameters" />
       <module name="orange_ocr-server" options="-parameters" />
       <module name="orange_ocr-viwer" options="-parameters" />
     </option>

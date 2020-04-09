@@ -22,6 +22,7 @@
     <modules>
         <module>../orange_ocr-viwer</module>
         <module>../orange_ocr-server</module>
+        <module>../orange_ocr-admin</module>
     </modules>
     <dependencies>
         <dependency>

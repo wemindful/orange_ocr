@@ -15,9 +15,6 @@ import java.util.stream.Collectors;
 @Controller
 public class IndexController {
 
-  /*  @Autowired
-    private ArticleService articleService;*/
-
     @Autowired
     private OcrTextService tagService;
 
@@ -30,10 +27,13 @@ public class IndexController {
     @Autowired
     private WebsiteAccessService websiteAccessService;
 
+    @Autowired
+    private OcrAccessService ocrAccessService;
+
     @RequestMapping({"/", "/index"})
 
     public String index(Model model) {
-        //model.addAttribute("articleTotalCount", articleService.count());
+        model.addAttribute("ocrTodayCount", ocrAccessService.sumWebsiteAccess(new Date()));
         model.addAttribute("tagTotalCount", tagService.count());
         model.addAttribute("linkTotalCount", linkService.count());
         model.addAttribute("messageTotalCount", messageService.count());

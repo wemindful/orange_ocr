@@ -5,7 +5,7 @@
 <header th:fragment="commonNavigation" class="am-topbar am-topbar-fixed-top">
     <div class="am-container">
         <h1 class="am-topbar-brand">
-            <a href="#">Orange Ocr</a>
+            <a th:href="@{/index}">Orange Ocr</a>
         </h1>
 
         <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only" data-am-collapse="{target: '#collapse-head'}"><span
@@ -44,7 +44,7 @@
 
             <div th:if="${session.user != null} ">
                 <div class="am-topbar-right">
-                    <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"><span th:text="${session.user}?:'默认值'" class="am-icon-pencil"></span></button>
+                    <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"><span   id="sessionname" th:text="${session.user}?:'默认值'" class="am-icon-pencil"></span></button>
             </div>
 
 

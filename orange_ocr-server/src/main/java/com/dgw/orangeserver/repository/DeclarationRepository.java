@@ -11,7 +11,5 @@ import java.util.Date;
 
 @Repository
 public interface DeclarationRepository extends JpaRepository<Declaration, Long>, JpaSpecificationExecutor<Declaration> {
-
     Integer countByArticleInputDate(Date articleInputDate);
-
 }

@@ -8,5 +8,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface LinkRepository extends JpaRepository<Link, Long>, JpaSpecificationExecutor<Link> {
-
 }

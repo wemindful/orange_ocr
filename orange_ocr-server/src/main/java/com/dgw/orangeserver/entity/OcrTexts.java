@@ -25,6 +25,8 @@ public class OcrTexts implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date tagInputDate;
 
+    private Date accessDate;
+
     public OcrTexts(String tagName) {
         this.textName = tagName;
     }

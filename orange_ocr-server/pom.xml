@@ -13,6 +13,11 @@
     <artifactId>orange_ocr-server</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+            <version>2.2.2</version>
+        </dependency>
         <!-- security-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

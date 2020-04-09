@@ -64,31 +64,58 @@ function ClearfirtsImg() {
 }
 // 上传图片
 function uploadImg() {
+    console.log("用户名"+ $("#sessionname").text());
 	// 校验是否登录
-    $("#ocr_result").html("");
-    //debugger;
-    if($("#firstImg").val() !== "") {
-		var progress = $.AMUI.progress;
-		 progress.start();
-        var formdata=new FormData();
-        formdata.append('fileName',$('#FirstfileImg').get(0).files[0]);
         $.ajax({
             async: false,
             type: 'POST',
-            url: "/imageUpload",
+            url: "/uploadAuth",
             dataType: 'json',
-            data: formdata,
-            contentType:false,//ajax上传图片需要添加
-            processData:false,//ajax上传图片需要添加
+            data:{
+                "username":$("#sessionname").text()
+            },
+            contentType:"application/x-www-form-urlencoded",
             success: function (data) {
-                $("#ocr_result").html(data.ocr_result);
-                alert(data.result_msg);
+                if(data.auth==0){
+                    console.log("登录失败");
+                    window.location.href="/login";
+                    return;
+                }else{
+                    console.log("登录成功");
+                    $("#ocr_result").html("");
+                    //debugger;
+                    if($("#firstImg").val() !== "") {
+                        var progress = $.AMUI.progress;
+                        progress.start();
+                        var formdata=new FormData();
+                        formdata.append('fileName',$('#FirstfileImg').get(0).files[0]);
+                        $.ajax({
+                            async: false,
+                            type: 'POST',
+                            url: "/imageUpload",
+                            dataType: 'json',
+                            data: formdata,
+                            contentType:false,//ajax上传图片需要添加
+                            processData:false,//ajax上传图片需要添加
+                            success: function (data) {
+                                $("#ocr_result").html(data.ocr_result);
+                                alert(data.result_msg);
+                            },
+                            error: function (e) {
+                                alert("error");
+                            }
+                        })
+                        console.log("other");
+                    } else {
+                        js.showMessage("请先选择文件");
+                    }
+                }
             },
             error: function (e) {
                 alert("error");
             }
-        })
-    } else {
-        js.showMessage("请先选择文件");
-    }
+        });
+
+
+
 }

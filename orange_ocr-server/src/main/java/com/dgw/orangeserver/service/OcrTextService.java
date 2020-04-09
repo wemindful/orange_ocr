@@ -21,6 +21,4 @@ public interface OcrTextService {
     Integer countByTagInputDate(Date tagInputdate);
 
     Long count();
-
-
 }
