@@ -58,7 +58,7 @@
 3.  也可使用SQL.sql
 
    ```xml
-   在项目更目录 SQL文件: 
+   在项目更目录 SQL文件: orange_ocr.sql
    ```
    
 
@@ -71,8 +71,6 @@
 orange_ocr-viwer : http://localhost:9090/
 orange_ocr-server: http://localhost:9091/
 orange_ocr-admin : http://localhost:9092/
-
-
 ```
 
 #### 项目展示
