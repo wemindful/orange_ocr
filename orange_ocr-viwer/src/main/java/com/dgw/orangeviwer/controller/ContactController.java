@@ -28,6 +28,7 @@ public class ContactController {
     @Transactional(rollbackFor = Throwable.class)
     public String sendMail(@RequestBody Message message) {
         message.setMessageInputDate(new Date());
+        message.setIsRead(0);
         messageService.saveMessage(message);
         return "success";
     }
