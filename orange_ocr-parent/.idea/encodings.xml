@@ -4,5 +4,6 @@
     <file url="file://$PROJECT_DIR$/../orange_ocr-admin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../orange_ocr-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../orange_ocr-viwer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../orange_ocr-viwer/src/main/resources/resource/常用汉字1000个.txt" charset="GBK" />
   </component>
 </project>
