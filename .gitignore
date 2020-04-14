@@ -6,6 +6,7 @@
 
 # maven
 target
+.gitee
 
 # BlueJ files
 *.ctxt

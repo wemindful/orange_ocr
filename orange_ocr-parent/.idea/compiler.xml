@@ -8,13 +8,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="orange_ocr-server" />
-        <module name="orange_ocr-viwer" />
         <module name="orange_ocr-admin" />
+        <module name="orange-viwer" />
+        <module name="orange_ocr-viwer" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="orange-viwer" options="-parameters" />
       <module name="orange_ocr-admin" options="-parameters" />
       <module name="orange_ocr-server" options="-parameters" />
       <module name="orange_ocr-viwer" options="-parameters" />
