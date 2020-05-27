@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/orange_ocr-viwer/orange-viwer.iml" filepath="$PROJECT_DIR$/orange_ocr-viwer/orange-viwer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/orange_ocr.iml" filepath="$PROJECT_DIR$/.idea/orange_ocr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/orange_ocr-admin/orange_ocr-admin.iml" filepath="$PROJECT_DIR$/orange_ocr-admin/orange_ocr-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/orange_ocr-parent/orange_ocr-parent.iml" filepath="$PROJECT_DIR$/orange_ocr-parent/orange_ocr-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/orange_ocr-server/orange_ocr-server.iml" filepath="$PROJECT_DIR$/orange_ocr-server/orange_ocr-server.iml" />
+    </modules>
+  </component>
+</project>
