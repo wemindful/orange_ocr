@@ -34,10 +34,10 @@
 
             <div th:if="${session.user == null}">
                 <div class="am-topbar-right">
-                    <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"><span class="am-icon-pencil"></span><a th:href="@{/register}">注册</a></button>
+                    <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm" style="border-radius: 5px"><span class="am-icon-pencil"></span><a th:href="@{/register}">注册</a></button>
                 </div>
                 <div class="am-topbar-right">
-                    <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-user"></span> <a th:href="@{/login}">登录</a>
+                    <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm" style="border-radius: 5px"><span class="am-icon-user"></span> <a th:href="@{/login}">登录</a>
                     </button>
                 </div>
             </div>
