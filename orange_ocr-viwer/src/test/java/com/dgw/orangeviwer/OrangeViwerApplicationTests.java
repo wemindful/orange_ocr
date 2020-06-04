@@ -1,10 +1,12 @@
 package com.dgw.orangeviwer;
 
+import com.dgw.orangeviwer.config.TessData;
 import com.dgw.orangeviwer.utils.TesseractMul;
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
 import net.sourceforge.tess4j.util.ImageHelper;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.imageio.ImageIO;
@@ -19,7 +21,7 @@ class OrangeViwerApplicationTests {
 
     }
 
-    @Test
+    //@Test
     public void test1() throws IOException, TesseractException {
         long stime=System.currentTimeMillis();
         BufferedImage img= ImageIO.read(new FileInputStream(new File("Z:\\1.png")));
@@ -56,4 +58,20 @@ class OrangeViwerApplicationTests {
         return buffer.toString();
     }
 
+    @Autowired
+    private TessData tessData;
+
+    @Test
+    public void testPath(){
+        System.out.println(tessData.getPath());
+    }
+
+    @Autowired
+    private TesseractMul tesseractMul;
+
+    @Test
+    public void testGetPath(){
+        Tesseract tesseract = tesseractMul.getCurrTesseract();
+        System.out.println(tesseract);
+    }
 }

@@ -1,6 +1,7 @@
 package com.dgw.orangeviwer.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.dgw.orangeviwer.config.TessData;
 import com.dgw.orangeviwer.constants.Constant;
 import com.dgw.orangeviwer.entity.OcrTexts;
 import com.dgw.orangeviwer.services.OcrAccessService;
@@ -53,6 +54,13 @@ public class OcrController {
     private HttpSession session;
 
     private static String currentPeople;
+
+    @Autowired
+    private TesseractMul tesseractMul;
+
+    @Autowired
+    private TessData tessData;
+
 
     @PostMapping("/uploadAuth")
     @ResponseBody
@@ -141,8 +149,10 @@ public class OcrController {
         long stime=System.currentTimeMillis();
         try {
             BufferedImage img= ImageIO.read(new FileInputStream(new File(imagePath)));
-            BufferedImage binaryimage= ImageHelper.convertImageToBinary(img);
-            Tesseract tesseract= new TesseractMul("chi_sim").getCurrTesseract();
+            BufferedImage grayscale = ImageHelper.convertImageToGrayscale(img);
+            BufferedImage binaryimage= ImageHelper.convertImageToBinary(grayscale);
+            // Tesseract tesseract= new TesseractMul("chi_sim").getCurrTesseract();
+            Tesseract tesseract = tesseractMul.getCurrTesseract(tessData.getPath());
             result=tesseract.doOCR(binaryimage);
             img=null;
             binaryimage=null;
