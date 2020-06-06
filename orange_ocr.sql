@@ -11,7 +11,7 @@
  Target Server Version : 80013
  File Encoding         : 65001
 
- Date: 09/04/2020 00:50:07
+ Date: 04/06/2020 22:23:46
 */
 
 SET NAMES utf8mb4;
@@ -82,7 +82,7 @@ CREATE TABLE `message`  (
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `subject` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`message_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of message
@@ -98,7 +98,7 @@ CREATE TABLE `ocraccess`  (
   `access_count` int(11) NULL DEFAULT NULL,
   `access_date` date NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Fixed;
+) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Fixed;
 
 -- ----------------------------
 -- Records of ocraccess
@@ -117,7 +117,7 @@ CREATE TABLE `ocrtexts`  (
   `tag_input_date` date NULL DEFAULT NULL,
   `text_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`text_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of ocrtexts
@@ -194,7 +194,7 @@ CREATE TABLE `user`  (
   `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`user_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user
@@ -228,18 +228,17 @@ CREATE TABLE `website_access`  (
   `access_count` int(11) NULL DEFAULT NULL,
   `access_date` date NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Fixed;
+) ENGINE = MyISAM AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Fixed;
 
 -- ----------------------------
 -- Records of website_access
 -- ----------------------------
-INSERT INTO `website_access` VALUES (1, 23148, '2020-04-08');
-INSERT INTO `website_access` VALUES (2, 23300, '2020-04-09');
-INSERT INTO `website_access` VALUES (3, 23000, '2020-04-07');
-INSERT INTO `website_access` VALUES (4, 21100, '2020-04-06');
-INSERT INTO `website_access` VALUES (5, 20100, '2020-04-05');
-INSERT INTO `website_access` VALUES (6, 19910, '2020-04-04');
-INSERT INTO `website_access` VALUES (7, 19810, '2020-04-03');
+INSERT INTO `website_access` VALUES (1, 23300, '2020-06-04');
+INSERT INTO `website_access` VALUES (2, 23000, '2020-06-03');
+INSERT INTO `website_access` VALUES (3, 21100, '2020-06-02');
+INSERT INTO `website_access` VALUES (4, 20100, '2020-06-01');
+INSERT INTO `website_access` VALUES (5, 19910, '2020-05-31');
+INSERT INTO `website_access` VALUES (6, 19810, '2020-05-30');
 
 -- ----------------------------
 -- Table structure for website_config
