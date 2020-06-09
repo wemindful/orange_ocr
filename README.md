@@ -75,7 +75,9 @@ orange_ocr-admin : http://localhost:9092/
 
 #### 项目展示
 
- ![](project-image/2.png)
+![](project-image/13.jpg)
+
+ !(project-image/2.png)
 
 ![](project-image/7.png)
 

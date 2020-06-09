@@ -31,6 +31,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -79,7 +80,7 @@ public class OcrController {
 
     @PostMapping("/imageUpload")
     @ResponseBody
-    public Map imageUpload(@RequestParam("fileName") MultipartFile file) {
+    public Map imageUpload(@RequestParam("fileName") MultipartFile file,@RequestParam("imgType")String Type) {
 
         //上传结果信息
         String result_msg = "";
@@ -87,6 +88,8 @@ public class OcrController {
         String result_code = "";
         // 识别结果
         String ocr_result = "";
+        // 图像类型
+        String imgType =Type;
 
         Map<String, Object> root = new HashMap<String, Object>();
 
@@ -126,7 +129,7 @@ public class OcrController {
                 result_msg = "图片格式不正确";
             }
         }
-
+        logger.log(Level.INFO,"识别类型:"+imgType);
         root.put("result_msg", result_msg);
         root.put("result_code", result_code);
         root.put("ocr_result", ocr_result);

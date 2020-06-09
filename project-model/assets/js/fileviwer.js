@@ -89,9 +89,9 @@ function uploadImg() {
                         progress.start();
                         var formdata=new FormData();
                         formdata.append('fileName',$('#FirstfileImg').get(0).files[0]);
-                        //增加数据选项
-                        var hos = $("#img-select option:selected").val();
-                        formdata.append('imgType',hos);
+						//增加数据选项
+						var hos = $("#img-select option:selected").val();
+						formdata.append('imgType',hos);
                         $.ajax({
                             async: false,
                             type: 'POST',

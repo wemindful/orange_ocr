@@ -1,0 +1,230 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<!DOCTYPE html>
+	<html>
+		<head lang="en">
+			<meta charset="UTF-8">
+			<title>Orange Ocr</title>
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<meta name="format-detection" content="telephone=no">
+			<meta name="renderer" content="webkit">
+			<meta http-equiv="Cache-Control" content="no-siteapp" />
+			<link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
+			<link rel="stylesheet" href="assets/css/amazeui.min.css" />
+			<link rel="stylesheet" href="assets/css/app.css" />
+		</head>
+		<body>
+			<header>
+				<div class="am-container">
+					<h1 class="am-topbar-brand">
+						<a href="/index">Orange Ocr</a>
+					</h1>
+
+					<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only" data-am-collapse="{target: '#collapse-head'}"><span
+						 class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+					<div class="am-collapse am-topbar-collapse" id="collapse-head">
+						<ul class="am-nav am-nav-pills am-topbar-nav">
+							<li class="am-active"><a href="/index">首页</a></li>
+							<li class="am-dropdown" data-am-dropdown>
+								<a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+									主要功能 <span class="am-icon-caret-down"></span>
+								</a>
+								<ul class="am-dropdown-content">
+									<li class="am-dropdown-header">标题</li>
+									<li><a href="#">1. 默认样式</a></li>
+									<li><a href="#">2. 基础设置</a></li>
+									<li><a href="#">3. 文字排版</a></li>
+								</ul>
+							</li>
+
+							<li><a href="#" data-am-modal="{target: '#doc-modal-1', closeViaDimmer: 0, width: 400, height: 225}">关 于</a></li>
+							<li><a href="/contact">联系我</a></li>
+
+						</ul>
+
+
+						<div>
+							<div class="am-topbar-right">
+								<button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm" style="border-radius: 5px"><span class="am-icon-pencil"></span><a
+									 href="/register">注册</a></button>
+							</div>
+							<div class="am-topbar-right">
+								<button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm" style="border-radius: 5px"><span class="am-icon-user"></span>
+									<a href="/login">登录</a>
+								</button>
+							</div>
+						</div>
+
+
+					</div>
+			</header>
+
+			<div class="get">
+				<div class="am-g">
+					<div class="am-u-lg-12">
+						<h1 class="get-title">Orange Ocr 免费在线OCR</h1>
+
+						<p>
+							一个巨好用的免费在线OCR
+						</p>
+
+						<p>累计访问:
+							<a href="#" class="am-text-lg">2</a>
+							√
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="detail">
+				<div class="am-g am-container">
+					<span class="am-monospace">
+						<h3>在线文字识别，OCR服务－OCR Orange</h3>
+						<hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+					</span>
+				</div>
+			</div>
+			<!--  核心功能页面 -->
+			<div class="fileUpdata">
+				<div class="am-container">
+					<div>
+						<div class="am-input-sm">
+							<div>
+								<i class="am-icon-file am-icon-md">上传文件 ( png / jpg )</i>
+								<input type="file" placeholder="&nbsp" name="firstImg" onchange="FirstImg()" id="FirstfileImg" class="am-form-field"
+								 style="margin-top: 15px" />
+							</div>
+						</div>
+						<div class="am-input-sm">
+							<i class="am-icon-text-height am-icon-md">选择类别 ( 类型 /属性 )</i>
+							<br>
+							<select id="img-select" class="am-form-field">
+								<option value="option1" selected="selected">通用文字识别</option>
+								<option value="option2">银行 卡 识别</option>
+								<option value="option3">营业执照识别</option>
+								<option value="option3">火车 票 识别</option>
+							</select>
+							<span class="am-form-caret"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 图片预览 -->
+			<div class="span5">
+				<div class="am-container">
+					<div class="span6">
+						<div class="imageviwer">
+							<fieldset style="width:350px;">
+								<div class="imagearea">
+									<h3>图片预览</h3>
+								</div>
+								<div style="position: relative;" id="ccc">
+								</div>
+							</fieldset>
+						</div>
+						<div class="imgandinfo">
+							<div class="imagearea">
+								<h3>识别结果</h3>
+							</div>
+							<div>
+								<textarea id="ocr_result" class="form-control" cols="20" name="parsedResult" rows="2" style="height:180px; width:85%; margin-left:28px;"></textarea>
+							</div>
+							<!--复制清空-->
+							<input type="button" name="" value="&nbsp;一键清空&nbsp;" class="am-btn am-btn-default am-btn-sm imagearea" style="margin-left: 40px;margin-top: 10px;border-radius: 5px">
+							<input type="button" name="" value="&nbsp;复制文本&nbsp;" class="am-btn am-btn-default am-btn-sm imagearea" style="margin-left: 80px;margin-top: 10px;border-radius: 5px">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="detail">
+				<div class="am-g am-container">
+					<span class="am-monospace">
+						<h3>如果我们帮助到了你，也请你帮助我们！－OCR Orange</h3>
+						<hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+					</span>
+					<article class="am-article">
+						<div class="am-article-hd">
+							<p class="am-article-meta">xxxxx</p>
+						</div>
+						<div class="am-article-bd">
+							<p class="">请把本站分享给别人（右侧分享按钮），让更多的人使用我们的服务。或者，你可以捐助我们<em style="font-size: 18px;color: #FC7405;">1元</em>，鼓励我们做出更好的产品。</p>
+						</div>
+					</article>
+					<div class="cytronHelpQr">
+						<img src="./assets/img/1.png">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<img src="./assets/img/2.png">
+					</div>
+				</div>
+			</div>
+
+
+			<div class="hope">
+				<div class="am-g am-container">
+					<div class="am-u-lg-4 am-u-md-6 am-u-sm-12 hope-img">
+						<img src="assets/i/examples/landing.png" alt="" data-am-scrollspy="{animation:'slide-left', repeat: false}">
+						<hr class="am-article-divider am-show-sm-only hope-hr">
+					</div>
+					<div class="am-u-lg-8 am-u-md-6 am-u-sm-12">
+						<h2 class="hope-title">同我们一起打造你的高效工作</h2>
+
+						<p>
+							在知识爆炸的年代，我们应该高效工作,在线Orange OCR <br>
+							是一个不错的选择.
+						</p>
+					</div>
+				</div>
+			</div>
+			<!--  模态窗口 关于 -->
+			<div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-1">
+				<div class="am-modal-dialog">
+					<div class="am-modal-hd">关于
+						<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+					</div>
+					<div class="am-modal-bd">
+						Orange OCR 是一款免费 稳定在线的OCR
+					</div>
+				</div>
+			</div>
+			<footer>
+				<footer class="footer">
+					<!-- <p>© 2020 <a href="http://www.xxx.com" target="_blank">Orange OCR, Inc.</a> Licensed under <a href="mailto:daiguoweistyel@foxmail.com">daiguoweistyel@foxmail.com</a>.
+        by the AmazeUI Team.</p>-->
+					<div id="footer">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-2">
+									<p> 友情链接:
+										<span>
+											<a target="_blank" href="https://www.cnblogs.com/dgwblog/" title="我的博客">Wei 博客</a><br />
+										</span><span>
+											<a target="_blank" href="www.baidu.com" title="baidu ">百度</a><br />
+										</span>
+									</p>
+								</div>
+								<div class="col-lg-2">
+									<p>© 2020 <a href="http://www.xxx.com" target="_blank">Daiguowei.cn</a> All rights reserved. <a href="mailto:daiguoweistyel@foxmail.com">辽ICP备17014944号-1</a>.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</footer>
+			<div>
+				<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+				</script>
+				<!--[if (gte IE 9)|!(IE)]> <!-->
+				<script src="assets/js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+				<!--<![endif]-->
+				<script src="assets/js/jquery.validate.min.js" type="text/javascript" charset="utf-8"></script>
+				<script src="assets/js/amazeui.js" type="text/javascript" charset="utf-8"></script>
+				<script src="assets/js/fileviwer.js" type="text/javascript" charset="utf-8"></script>
+				<script src="assets/js/jquery-migrate-1.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+				<script src="assets/js/ajaxfileupload.js" type="text/javascript" charset="utf-8"></script>
+			</div>
+		</body>
+	</html>

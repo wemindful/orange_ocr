@@ -1,0 +1,119 @@
+/* Write your styles */
+
+.get {
+      background: #FFD700;
+      color: #fff;
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .get-title {
+      font-size: 200%;
+      border: 2px solid #fff;
+      padding: 20px;
+      display: inline-block;
+    }
+
+    .get-btn {
+      background: #fff;
+    }
+
+    .detail{
+	  padding-top: 40px;
+      background: #fff;
+	 
+    }
+	.detail  span h3{
+		font-size: 120%;
+	} 
+
+    .detail-h2 {
+      text-align: center;
+      font-size: 150%;
+      margin: 40px 0;
+    }
+
+    .detail-h3 {
+      color: #1f8dd6;
+    }
+
+    .detail-p {
+      color: #7f8c8d;
+    }
+
+    .detail-mb {
+      margin-bottom: 30px;
+    }
+
+    .hope {
+      background: #FFD700;
+      padding: 50px 0;
+	  margin-top: 10px;
+    }
+
+    .hope-img {
+      text-align: center;
+    }
+
+    .hope-hr {
+      border-color: #149C88;
+    }
+
+    .hope-title {
+      font-size: 140%;
+    }
+
+    .about {
+      background: #fff;
+      padding: 40px 0;
+      color: #7f8c8d;
+    }
+
+    .about-color {
+      color: #34495e;
+    }
+
+    .about-title {
+      font-size: 180%;
+      padding: 30px 0 50px 0;
+      text-align: center;
+    }
+
+    .footer p {
+      color: #7f8c8d;
+      margin: 0;
+      padding: 15px 0;
+      text-align: center;
+      background: #2d3e50;
+    }
+	.imageviwer{
+		display: inline-block;
+		border: 1px solid black;
+		height: 280px;
+		vertical-align: top;
+	}
+	.span5{
+		margin-top: 50px;
+	}
+	.imgandinfo{
+		margin-left: 214px;
+		display: inline-block;
+		border: 1px solid red;
+		width: 350px;
+		height: 280px;
+	}
+	.imagearea{
+		text-align: center;
+		background-color: #FFD700;
+		color: #FFFFFF;
+	}
+	.span6{
+		border: 1px solid red;
+	}
+	.cytronHelpQr {
+	    margin: 0 auto;
+	    text-align: center;
+	}
+	.cytronHelpQr img {
+	    width: 200px;
+	}
